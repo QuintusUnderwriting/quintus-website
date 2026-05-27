@@ -32,26 +32,44 @@ export const productNav = [
   { label: "Bespoke Schemes", href: "/bespoke-schemes" },
 ];
 
-export const brokerReasons = [
+export type BrokerReasonSymbol =
+  | "broker"
+  | "underwriting"
+  | "technology"
+  | "relationships"
+  | "strength";
+
+type BrokerReason = {
+  title: string;
+  text: string;
+  symbol: BrokerReasonSymbol;
+};
+
+export const brokerReasons: BrokerReason[] = [
   {
     title: "Broker First",
     text: "Responsive service, clear communication, and underwriting expertise brokers can rely on.",
+    symbol: "broker",
   },
   {
     title: "Expert Underwriting",
     text: "Judgement-led decisions shaped by risk insight, technical experience, and commercial context.",
+    symbol: "underwriting",
   },
   {
     title: "Intelligent Technology",
     text: "A modern approach to process, data, and efficiency without losing personal underwriting care.",
+    symbol: "technology",
   },
   {
     title: "Strong Relationships",
     text: "Built on trust, transparency, and long-term partnerships that create better outcomes.",
+    symbol: "relationships",
   },
   {
     title: "Financial Strength",
     text: "A disciplined operating model designed to support stable broker and policyholder confidence.",
+    symbol: "strength",
   },
 ];
 

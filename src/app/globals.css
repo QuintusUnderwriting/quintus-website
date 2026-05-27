@@ -405,6 +405,23 @@ svg {
   transform: rotate(45deg);
 }
 
+.reason-mark {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.reason-symbol {
+  width: 48px;
+  height: 48px;
+  color: var(--classic-gold);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.75;
+}
+
 .pillar-symbol {
   width: 48px;
   height: 48px;
@@ -1112,6 +1129,11 @@ svg {
 
   .pillar-index {
     font-size: 1rem;
+  }
+
+  .reason-symbol {
+    width: 44px;
+    height: 44px;
   }
 
   .product-card {
