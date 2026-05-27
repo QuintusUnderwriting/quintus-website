@@ -57,24 +57,24 @@ export const brokerReasons = [
 
 export const pillars = [
   {
-    title: "Insight",
-    text: "Deep risk understanding informs better questions, better terms, and better outcomes.",
+    title: "Human Excellence",
+    text: "Empowered underwriting talent sits at the centre of Quintus, combining technical judgement, commercial empathy and broker-facing energy to reach clear, confident outcomes.",
   },
   {
-    title: "Judgement",
-    text: "Experienced underwriters apply balanced, accountable decision-making to every case.",
+    title: "Intelligent Innovation & Technology",
+    text: "Technology is applied with intent: removing friction, improving insight and speeding broker journeys while keeping human judgement in control of underwriting decisions.",
   },
   {
-    title: "Partnership",
-    text: "We work closely with brokers as true partners in risk, placement, and growth.",
+    title: "Transparent Data Insight",
+    text: "We share meaningful performance data with brokers and capacity partners, turning trends, outcomes and portfolio insight into better decisions and sustainable books.",
   },
   {
-    title: "Integrity",
-    text: "Clear, fair, and transparent conduct sits at the centre of the Quintus approach.",
+    title: "Market-Leading Products & Solutions",
+    text: "Products are built around customer need, robust wording, competitive pricing and disciplined controls, giving brokers a first-choice market they can trust.",
   },
   {
-    title: "Performance",
-    text: "Focused underwriting discipline supports sustainable value for brokers, clients, and capacity.",
+    title: "Relentless Improvement",
+    text: "We actively seek challenge, broker feedback and insurer insight, then adapt with governance, discipline and pace so every MGA remains relevant and resilient.",
   },
 ];
 

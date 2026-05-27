@@ -58,7 +58,12 @@ export default function AboutUsPage() {
           ))}
         </div>
       </section>
-      <StructuredBand title="Five Pillars of Underwriting Excellence" items={pillars} />
+      <StructuredBand
+        title="Built on Five Pillars"
+        text="Quintus means the fifth: a platform designed around five structural principles that support long-term performance, trusted market relationships and consistent underwriting outcomes."
+        items={pillars}
+        icon="pillar"
+      />
       <BrokerCta />
     </>
   );

@@ -86,51 +86,29 @@ svg {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(8, 28, 43, 0.96);
-  border-bottom: 1px solid rgba(230, 199, 104, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(8, 28, 43, 0.07);
   backdrop-filter: blur(16px);
 }
 
 .header-inner {
-  min-height: 82px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
 .brand-mark {
-  display: inline-grid;
-  gap: 2px;
-  color: var(--white);
+  display: inline-flex;
+  align-items: center;
   line-height: 1;
-  min-width: 178px;
+  min-width: 160px;
 }
 
-.brand-word {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.42rem, 2vw, 1.9rem);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.brand-rule {
-  width: 112px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--classic-gold) 16%,
-    var(--classic-gold) 84%,
-    transparent
-  );
-}
-
-.brand-descriptor {
-  color: var(--soft-gold);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+.brand-logo {
+  width: clamp(132px, 12vw, 156px);
+  height: auto;
 }
 
 .desktop-nav {
@@ -138,7 +116,7 @@ svg {
   align-items: center;
   gap: 28px;
   margin-left: auto;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--quintus-navy);
   font-size: 0.84rem;
   font-weight: 600;
 }
@@ -150,8 +128,8 @@ svg {
 
 .desktop-nav a:hover,
 .desktop-nav a:focus-visible {
-  color: var(--soft-gold);
-  border-bottom-color: var(--soft-gold);
+  color: var(--classic-gold);
+  border-bottom-color: var(--classic-gold);
 }
 
 .button {
@@ -228,7 +206,7 @@ svg {
   place-items: center;
   list-style: none;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid var(--line);
 }
 
 .mobile-menu summary::-webkit-details-marker {
@@ -238,7 +216,7 @@ svg {
 .mobile-menu summary span {
   width: 19px;
   height: 1px;
-  background: var(--white);
+  background: var(--quintus-navy);
   grid-area: 1 / 1;
 }
 
@@ -258,16 +236,16 @@ svg {
   display: grid;
   gap: 4px;
   padding: 14px;
-  background: var(--deep-navy);
-  border: 1px solid rgba(230, 199, 104, 0.22);
+  background: var(--white);
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
 
 .mobile-menu nav a {
   padding: 12px 10px;
-  color: var(--white);
+  color: var(--quintus-navy);
   font-weight: 700;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--line);
 }
 
 .hero {
@@ -409,6 +387,11 @@ svg {
   border-left: 1px solid rgba(230, 199, 104, 0.28);
 }
 
+.reason-item-pillar {
+  min-height: 320px;
+  padding-top: 10px;
+}
+
 .reason-item:last-child {
   border-right: 1px solid rgba(230, 199, 104, 0.28);
 }
@@ -422,11 +405,42 @@ svg {
   transform: rotate(45deg);
 }
 
+.pillar-symbol {
+  width: 48px;
+  height: 48px;
+  color: var(--classic-gold);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.75;
+}
+
+.pillar-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.pillar-index {
+  color: var(--soft-gold);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .reason-item h3 {
   margin: 0 0 10px;
   color: var(--white);
   font-size: 0.95rem;
   line-height: 1.35;
+}
+
+.reason-item-pillar h3 {
+  min-height: 52px;
 }
 
 .reason-item p {
@@ -615,6 +629,10 @@ svg {
   max-width: 260px;
 }
 
+.brand-mark-footer {
+  width: fit-content;
+}
+
 .site-footer h2 {
   margin: 0 0 16px;
   color: var(--white);
@@ -645,6 +663,13 @@ svg {
   padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.8rem;
+}
+
+.legal-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 18px;
 }
 
 .page-hero {
@@ -867,6 +892,127 @@ svg {
   background: var(--soft-gold);
 }
 
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 1fr);
+  gap: clamp(34px, 6vw, 78px);
+  align-items: start;
+}
+
+.legal-summary {
+  position: sticky;
+  top: 136px;
+  padding: 30px;
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--classic-gold);
+}
+
+.legal-summary h2 {
+  margin: 0;
+  color: var(--quintus-navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1.12;
+}
+
+.legal-summary dl {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 0;
+}
+
+.legal-summary dt {
+  color: var(--slate-grey);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.legal-summary dd {
+  margin: 2px 0 0;
+  color: var(--quintus-navy);
+  font-weight: 700;
+}
+
+.legal-content {
+  display: grid;
+  gap: 26px;
+}
+
+.legal-section {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-section h2 {
+  margin: 0 0 16px;
+  color: var(--quintus-navy);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  line-height: 1.12;
+}
+
+.legal-section p {
+  margin: 0;
+  color: var(--slate-grey);
+}
+
+.legal-section p + p,
+.legal-section .legal-list + p,
+.legal-section .legal-group-grid + p,
+.legal-section .legal-inline-links + p {
+  margin-top: 14px;
+}
+
+.legal-list {
+  margin-bottom: 18px;
+}
+
+.legal-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.legal-group {
+  padding: 20px;
+  background: var(--off-white);
+  border-left: 2px solid var(--classic-gold);
+}
+
+.legal-group h3 {
+  margin: 0 0 10px;
+  color: var(--quintus-navy);
+  font-size: 0.96rem;
+}
+
+.legal-group ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--slate-grey);
+}
+
+.legal-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.legal-inline-links a {
+  color: var(--quintus-navy);
+  font-weight: 800;
+  border-bottom: 1px solid var(--classic-gold);
+}
+
+.legal-simple {
+  max-width: 840px;
+}
+
 @media (max-width: 1080px) {
   .desktop-nav,
   .header-cta {
@@ -898,15 +1044,15 @@ svg {
   }
 
   .header-inner {
-    min-height: 74px;
+    min-height: 82px;
   }
 
   .brand-mark {
-    min-width: auto;
+    min-width: 118px;
   }
 
-  .brand-word {
-    font-size: 1.36rem;
+  .brand-logo {
+    width: 118px;
   }
 
   .hero {
@@ -960,6 +1106,14 @@ svg {
     border-bottom: 1px solid rgba(230, 199, 104, 0.28);
   }
 
+  .pillar-mark {
+    gap: 10px;
+  }
+
+  .pillar-index {
+    font-size: 1rem;
+  }
+
   .product-card {
     min-height: auto;
   }
@@ -988,6 +1142,19 @@ svg {
 
   .footer-bottom {
     flex-direction: column;
+  }
+
+  .legal-footer-links {
+    justify-content: flex-start;
+  }
+
+  .legal-layout,
+  .legal-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-summary {
+    position: static;
   }
 }
 

@@ -9,6 +9,9 @@ const routes = [
   "/landowners-liability",
   "/bespoke-schemes",
   "/become-a-broker-partner",
+  "/privacy-policy",
+  "/terms-and-conditions",
+  "/fca-notice",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

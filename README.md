@@ -12,6 +12,9 @@ A professional Next.js App Router website draft for Quintus Underwriting, built 
 - `/landowners-liability`
 - `/bespoke-schemes`
 - `/become-a-broker-partner`
+- `/privacy-policy`
+- `/terms-and-conditions`
+- `/fca-notice`
 
 ## Local Development
 

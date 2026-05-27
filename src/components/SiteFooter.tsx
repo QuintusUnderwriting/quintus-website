@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { brokerRegistrationUrl, navigation, productNav } from "@/data/site";
+import { legalLinks } from "@/data/legal";
 import { BrandMark } from "./BrandMark";
 
 export function SiteFooter() {
@@ -7,7 +8,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <BrandMark />
+          <BrandMark variant="footer" />
           <p>Specialist underwriting. Broker first. Built for tomorrow.</p>
         </div>
         <div>
@@ -53,7 +54,13 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>© 2026 Quintus Underwriting. All rights reserved.</span>
-        <span>Privacy Policy | Terms & Conditions | FCA Notice</span>
+        <nav aria-label="Legal links" className="legal-footer-links">
+          {legalLinks.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   );
