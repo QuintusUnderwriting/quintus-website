@@ -6,6 +6,7 @@ type ButtonLinkProps = {
   children: ReactNode;
   variant?: "gold" | "navy" | "ghost";
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export function ButtonLink({
@@ -13,6 +14,7 @@ export function ButtonLink({
   children,
   variant = "gold",
   className = "",
+  onClick,
 }: ButtonLinkProps) {
   const isExternal = href.startsWith("http");
   const classes = `button button-${variant} ${className}`;
@@ -32,14 +34,20 @@ export function ButtonLink({
 
   if (isExternal) {
     return (
-      <a className={classes} href={href} target="_blank" rel="noreferrer">
+      <a
+        className={classes}
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        onClick={onClick}
+      >
         {content}
       </a>
     );
   }
 
   return (
-    <Link className={classes} href={href}>
+    <Link className={classes} href={href} onClick={onClick}>
       {content}
     </Link>
   );

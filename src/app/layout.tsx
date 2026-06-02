@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { LaunchSoonPopup } from "@/components/LaunchSoonPopup";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en-GB">
       <body>
         <SiteHeader />
+        <LaunchSoonPopup />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>
