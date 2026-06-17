@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { LaunchSoonPopup } from "@/components/LaunchSoonPopup";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body>
         <SiteHeader />
         <LaunchSoonPopup />
+        <CookieConsentBanner />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>

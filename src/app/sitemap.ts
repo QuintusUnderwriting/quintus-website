@@ -10,6 +10,7 @@ const routes = [
   "/bespoke-schemes",
   "/become-a-broker-partner",
   "/privacy-policy",
+  "/cookie-policy",
   "/terms-and-conditions",
   "/fca-notice",
 ];

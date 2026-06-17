@@ -2,6 +2,7 @@ import Link from "next/link";
 import { brokerRegistrationUrl, navigation, productNav } from "@/data/site";
 import { legalLinks } from "@/data/legal";
 import { BrandMark } from "./BrandMark";
+import { CookieSettingsButton } from "./CookieSettingsButton";
 
 export function SiteFooter() {
   return (
@@ -54,13 +55,18 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>© 2026 Quintus Underwriting. All rights reserved.</span>
-        <nav aria-label="Legal links" className="legal-footer-links">
-          {legalLinks.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="footer-bottom-actions">
+          <CookieSettingsButton className="footer-cookie-settings">
+            Cookie settings
+          </CookieSettingsButton>
+          <nav aria-label="Legal links" className="legal-footer-links">
+            {legalLinks.map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );

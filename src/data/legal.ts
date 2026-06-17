@@ -1,5 +1,25 @@
-export const legalLinks = [
+export type LegalLink = {
+  label: string;
+  href: string;
+};
+
+export type LegalGroup = {
+  title: string;
+  items: string[];
+};
+
+export type LegalSection = {
+  title: string;
+  paragraphs?: string[];
+  list?: string[];
+  groups?: LegalGroup[];
+  links?: LegalLink[];
+  followOn?: string[];
+};
+
+export const legalLinks: LegalLink[] = [
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
   { label: "Terms & Conditions", href: "/terms-and-conditions" },
   { label: "FCA Notice", href: "/fca-notice" },
 ];
@@ -11,7 +31,7 @@ export const privacyPolicyMeta = {
   date: "March 2026",
 };
 
-export const privacyPolicySections = [
+export const privacyPolicySections: LegalSection[] = [
   {
     title: "Introduction",
     paragraphs: [
@@ -231,9 +251,11 @@ export const privacyPolicySections = [
   {
     title: "Cookies & Website Use",
     paragraphs: [
-      "Our website may use cookies and tracking technologies to improve user experience, analyse website usage, and support functionality.",
-      "A separate Cookie Policy may be provided where applicable.",
+      "Our website uses strictly necessary cookies to keep the site working and to remember your cookie choices.",
+      "Optional analytics or marketing cookies are only used if you actively allow them through the cookie notice.",
+      "You can review the Cookie Policy for more detail and use the cookie settings button to change your preferences at any time.",
     ],
+    links: [{ label: "Read the Cookie Policy", href: "/cookie-policy" }],
   },
   {
     title: "Complaints",
@@ -255,6 +277,85 @@ export const privacyPolicySections = [
     title: "Updates to this Policy",
     paragraphs: [
       "This Privacy Policy will be reviewed periodically and updated where necessary to reflect regulatory changes, business developments, and operational changes.",
+    ],
+  },
+];
+
+export const cookiePolicyMeta = {
+  title: "Cookie Policy",
+  documentTitle: "Quintus Partners Ltd - Cookie Policy v1.0",
+  preparedBy: "Thomas Cartwright",
+  date: "June 2026",
+};
+
+export const cookiePolicySections: LegalSection[] = [
+  {
+    title: "Overview",
+    paragraphs: [
+      "Quintus Underwriting uses strictly necessary cookies to keep the website secure, functional, and able to remember your cookie preferences.",
+      "Optional analytics and marketing cookies are not set unless you make a positive choice through the cookie notice.",
+      "If we introduce new optional cookies in future, we will update this notice before they are used.",
+    ],
+  },
+  {
+    title: "What Cookies Are",
+    paragraphs: [
+      "Cookies are small text files placed on your device when you visit a website. They help websites remember settings, keep users signed in, and measure usage where appropriate.",
+      "Some cookies are strictly necessary for a website to function. Others are optional and should only be used with consent where required by law.",
+    ],
+  },
+  {
+    title: "Cookie Categories",
+    paragraphs: ["The categories we recognise are:"],
+    groups: [
+      {
+        title: "Strictly Necessary Cookies",
+        items: [
+          "Required for navigation, security, and basic site functionality",
+          "Remember the choice you make in the cookie notice",
+          "Do not require consent under the ICO exemption for essential functionality",
+        ],
+      },
+      {
+        title: "Analytics Cookies",
+        items: [
+          "Used only if you choose to allow them",
+          "Help us understand how the site is used so we can improve content and performance",
+          "Are not loaded before consent",
+        ],
+      },
+      {
+        title: "Marketing Cookies",
+        items: [
+          "Used only if you choose to allow them",
+          "May support campaign measurement and future broker journey improvements",
+          "Are not loaded before consent",
+        ],
+      },
+    ],
+  },
+  {
+    title: "How Consent Works",
+    paragraphs: [
+      "When you first visit the website, you will see a clear notice with options to accept all optional cookies, reject non-essential cookies, or manage your preferences.",
+      "We store your choice in a first-party preference cookie so the notice does not keep reappearing unless you change your settings.",
+      "You can withdraw or change consent at any time using the cookie settings button in the footer or by reopening the notice.",
+    ],
+    links: [{ label: "Privacy Policy", href: "/privacy-policy" }],
+  },
+  {
+    title: "Managing Your Preferences",
+    paragraphs: [
+      "If you want to change your mind, use the cookie settings button on the website footer or clear cookies in your browser settings.",
+      "You can also disable optional cookies in the cookie notice and save the updated choice.",
+      "If you disable optional cookies, the site will continue to function with essential cookies only.",
+    ],
+  },
+  {
+    title: "Changes to This Policy",
+    paragraphs: [
+      "We may update this Cookie Policy if our cookie usage changes, if we introduce new tools, or if legal requirements change.",
+      "Any material change will be reflected in the notice before new optional cookies are set.",
     ],
   },
 ];
