@@ -16,7 +16,7 @@ export type Product = {
   brokerSupport: string[];
 };
 
-export const brokerRegistrationUrl = "https://your-vercel-url.com/broker-onboarding";
+export const brokerRegistrationUrl = "https://quintus-control-centre.vercel.app/broker-onboarding";
 
 export const navigation = [
   { label: "Home", href: "/" },
