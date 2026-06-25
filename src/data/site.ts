@@ -16,7 +16,7 @@ export type Product = {
   brokerSupport: string[];
 };
 
-export const brokerRegistrationUrl = "https://forms.office.com/e/fZXhNgyP8q";
+export const brokerRegistrationUrl = "https://your-vercel-url.com/broker-onboarding";
 
 export const navigation = [
   { label: "Home", href: "/" },
